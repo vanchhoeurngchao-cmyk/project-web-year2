@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 250px;
+    height: 400px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+img{
+    height: 150px;
+    border-radius: 50%;
+}
+#role{
+    color: gray;
+    margin-top: -15px;
+}
+.haha{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.stat{
+    text-align: center;
+    p{
+        margin-top: -15px;
+    }
+}
+.bio{
+    background-color: gainsboro;
+    width: 200px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 5px;
+}
+.btn{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+button{
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+}
+#follow{
+    background-color: rgb(243, 83, 83);
+    color: white;
+}
+#follow:hover{
+    background-color: #E98EB4;
+}
+#message:hover{
+    background-color: rgb(146, 142, 142);
+    color: white;
+}
