@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../sidebar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#e8f1f8]">
+    <div class="grid grid-cols-[230px_1fr] gap-5 p-5 h-screen max-[992px]:grid-cols-[200px_1fr] max-[600px]:grid-cols-1">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../image/pink-cat-background-cute-cat-background-animal-background-stock-vector.jpg" alt="">
+                <h2>L-Learning</h2>
+            </div>
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="">Classes</a>
+                <a href="">Quiz</a>
+                <a href="">Learning Plan</a>
+                <a href="">Social</a>
+                <a href="">Settings</a>
+            </nav>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content flex flex-col h-full overflow-y-auto p-0 [&::-webkit-scrollbar]:hidden scrollbar-none">
+            <!-- HEADER -->
+            <div class="bg-gray-100 rounded-2xl p-10 shadow-md mb-5 flex items-center gap-4">
+                <div>
+                    <h3 class="text-[24px] font-bold">Welcome back user!!</h3>
+                    <p class="text-sm text-gray-500">you have completed 00% of your learning goal</p>
+                </div>
+            </div>
+
+            <!-- GRID SECTION -->
+            <div class="grid grid-cols-1 gap-5 flex-1">
+                <div class="grid grid-cols-2 gap-5 flex-1 max-[768px]:grid-cols-1">
+                    <!-- DAILY Quest -->
+                    <div class="bg-white rounded-3xl shadow-md px-6 py-6 min-h-[300px] text-lg font-semibold">
+                        <h3 class="text-xl max-[768px]:text-lg font-bold mb-4 text-center">Daily Quests</h3>
+                        <div class="flex flex-col space-y-4">
+                            <!-- QUEST ROW 1 -->
+                            <div class="grid grid-cols-4 items-center bg-gray-100 rounded-2xl px-4 py-2">
+                                <div class="flex flex-col col-span-3">
+                                    <span class="font-semibold text-gray-800">Complete 2 lessons</span>
+                                    <div class="relative w-full bg-gray-300 rounded-full h-5 mt-2 overflow-hidden">
+                                        <div class="absolute left-0 top-0 h-full bg-[#58CC02] w-[50%]"></div>
+                                        <span class="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">1 / 2</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img src="" class="w-14 h-14">
+                                </div>
+                            </div>
+
+                            <!-- QUEST ROW 2 -->
+                            <div class="grid grid-cols-4 items-center bg-gray-100 rounded-2xl px-4 py-2">
+                                <div class="flex flex-col col-span-3">
+                                    <span class="font-semibold text-gray-800">Earn 20 XP</span>
+                                    <div class="relative w-full bg-gray-300 rounded-full h-5 mt-2 overflow-hidden">
+                                        <div class="absolute left-0 top-0 h-full bg-[#FF9500] w-[60%]"></div>
+                                        <span class="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">12 / 20</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img src="" class="w-14 h-14">
+                                </div>
+                            </div>
+
+                            <!-- QUEST ROW 3 -->
+                            <div class="grid grid-cols-4 items-center bg-gray-100 rounded-2xl px-4 py-2">
+                                <div class="flex flex-col col-span-3">
+                                    <span class="font-semibold text-gray-800">Practice 5 minutes</span>
+                                    <div class="relative w-full bg-gray-300 rounded-full h-5 mt-2 overflow-hidden">
+                                        <div class="absolute left-0 top-0 h-full bg-[#1CB0F6] w-[100%]"></div>
+                                        <span class="absolute inset-0 flex items-center justify-center text-xs font-bold text-white">5 / 5</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img src="" class="w-14 h-14">
+                                </div>
+                            </div>
+
+                            <!-- QUEST ROW 4 -->
+                            <div class="grid grid-cols-4 items-center bg-gray-100 rounded-2xl px-4 py-2">
+                                <div class="flex flex-col col-span-3">
+                                    <span class="font-semibold text-gray-800">Complete a perfect lesson</span>
+                                    <div class="relative w-full bg-gray-300 rounded-full h-5 mt-2 overflow-hidden">
+                                        <span class="absolute inset-0 flex items-center justify-center text-xs font-bold text-gray-200">0 / 1</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <img src="" class="w-14 h-14">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CURRENT LESSON -->
+                    <div class="bg-white rounded-3xl shadow-md px-6 py-6 min-h-[300px] flex items-start justify-center text-lg font-semibold">
+                        <div class="w-full text-center">
+                            <h3 class="text-xl max-[768px]:text-lg font-bold mb-4">Current Lesson</h3>
+                            <div class="space-y-4">
+                                <!-- Card 1 -->
+                                <div class="bg-gray-200 p-4 rounded-xl shadow">
+                                    <p class="font-semibold">Grammar – Comparatives</p>
+                                    <p class="text-sm text-gray-500">Progress: 20%</p>
+                                    <div class="w-full h-4 bg-gray-300 rounded-full mt-1">
+                                        <div class="h-4 bg-purple-400 rounded-full w-[20%]"></div>
+                                    </div>
+                                    <button class="mt-4 w-full bg-purple-500 hover:bg-purple-600 text-white py-2 rounded-xl font-bold">
+                                        Continue
+                                    </button>
+                                </div>
+
+                                <!-- Card 2 -->
+                                <div class="bg-gray-200 p-4 rounded-xl shadow">
+                                    <p class="font-semibold">Listening – Daily Activities</p>
+                                    <p class="text-sm text-gray-500">Progress: 80%</p>
+                                    <div class="w-full h-4 bg-gray-300 rounded-full mt-1">
+                                        <div class="h-4 bg-yellow-400 rounded-full w-[80%]"></div>
+                                    </div>
+                                    <button class="mt-4 w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-xl font-bold">
+                                        Continue
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WEEKLY PROGRESSION (BIGGER + SPAN 2 COLS) -->
+                <div class="bg-white rounded-3xl shadow-md px-6 py-3 min-h-[350px] flex flex-col gap-5 mb-1">
+                    <h3 class="text-xl max-[768px]:text-lg font-bold my-3 text-center">Weekly Progression</h3>
+
+                    <!-- Subject Cards Grid -->
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-5 max-[768px]:grid-cols-2 max-[600px]:grid-cols-1 mt-6 flex-1 overflow-y-auto">
+                        <div class="bg-white rounded-2xl shadow-md p-8 mb-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                            <h3 class="mb-2 text-gray-800 text-lg font-semibold">Grammar</h3>
+                            <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">58%</span></p>
+                            <p class="text-gray-600">Practice: <span class="text-red-500 font-bold">2 sessions</span></p>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-md p-8 mb-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                            <h3 class="mb-2 text-gray-800 text-lg font-semibold">Vocabulary</h3>
+                            <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">70%</span></p>
+                            <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">5 sessions</span></p>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-md p-8 mb-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                            <h3 class="mb-2 text-gray-800 text-lg font-semibold">Listening</h3>
+                            <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">85%</span></p>
+                            <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">4 sessions</span></p>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-md p-8 mb-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                            <h3 class="mb-2 text-gray-800 text-lg font-semibold">Speaking</h3>
+                            <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">50%</span></p>
+                            <p class="text-gray-600">Practice: <span class="text-red-500 font-bold">1 session</span></p>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-md p-8 mb-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                            <h3 class="mb-2 text-gray-800 text-lg font-semibold">Reading</h3>
+                            <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">75%</span></p>
+                            <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">3 sessions</span></p>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-md p-8 mb-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                            <h3 class="mb-2 text-gray-800 text-lg font-semibold">Writing</h3>
+                            <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">62%</span></p>
+                            <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">4 sessions</span></p>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-md p-8 mb-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                            <h3 class="mb-2 text-gray-800 text-lg font-semibold">Conversation Skill</h3>
+                            <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">82%</span></p>
+                            <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">5 sessions</span></p>
+                        </div>
+                        <div class="bg-white rounded-2xl shadow-md p-8 mb-5 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                            <h3 class="mb-2 text-gray-800 text-lg font-semibold">Review</h3>
+                            <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">50%</span></p>
+                            <p class="text-gray-600">Practice: <span class="text-red-500 font-bold">1 session</span></p>
+                        </div>
+                    </div>
+                    <div class="bg-yellow-300 -mt-2 p-6 text-center rounded-2xl font-bold shadow flex-shrink-0">
+                        Reminder: Focus on Speaking and Grammar — they need more practice!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM BAR (unchanged) -->
+    <div class="bottombar">
+        <a href="#"><span class="material-symbols-rounded active">bar_chart_4_bars</span></a>
+        <a href=""><span class="material-symbols-rounded">menu_book</span></a>
+        <a href=""><span class="material-symbols-rounded">exercise</span></a>
+        <a href=""><span class="material-symbols-rounded">calendar_add_on</span></a>
+        <a href=""><span class="material-symbols-rounded">group_add</span></a>
+        <a href=""><span class="material-symbols-rounded">settings</span></a>
+    </div>
+
+</body>
+</html>
