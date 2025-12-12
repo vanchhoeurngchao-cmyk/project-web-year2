@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../sidebar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#e8f1f8]">
+    <div class="grid grid-cols-[230px_1fr] gap-5 p-5 h-screen max-[992px]:grid-cols-[200px_1fr] max-[600px]:grid-cols-1">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../image/pink-cat-background-cute-cat-background-animal-background-stock-vector.jpg" alt="">
+                <h2>L-Learning</h2>
+            </div>
+            <nav>
+                <a href="1Dashboard.html">Dashboard</a>
+                <a href="#" class="active">Classes</a>
+                <a href="3Quiz.html">Quiz</a>
+                <a href="4Learning_Plan.html">Learning Plan</a>
+                <a href="5Social.html">Social</a>
+                <a href="6Profile.html">Profile</a>
+            </nav>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content flex flex-col h-full overflow-y-auto p-0 [&::-webkit-scrollbar]:hidden scrollbar-none">
+            <!-- HEADER -->
+            <div class="bg-gray-100 rounded-2xl p-12 shadow-md mb-5 flex items-center gap-4">
+                <div>
+                    <h3 class="text-[30px] font-bold">SECTION 1, UNIT 1</h3>
+                    <p class="text-md text-gray-500">-----------------</p>
+                </div>
+            </div>
+
+            <!-- CLASSES GRID -->
+            <div class="bg-white rounded-3xl shadow-md p-8 mb-1 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-10 max-[768px]:grid-cols-2 max-[600px]:grid-cols-1 overflow-y-auto">
+                <!-- test -->
+                
+                <!-- test -->
+
+                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Vocabulary</h3>
+                    <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">70%</span></p>
+                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">5 sessions</span></p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Listening</h3>
+                    <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">85%</span></p>
+                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">4 sessions</span></p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Speaking</h3>
+                    <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">50%</span></p>
+                    <p class="text-gray-600">Practice: <span class="text-red-500 font-bold">1 session</span></p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Reading</h3>
+                    <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">75%</span></p>
+                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">3 sessions</span></p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Writing</h3>
+                    <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">62%</span></p>
+                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">4 sessions</span></p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Conversation Skill</h3>
+                    <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">82%</span></p>
+                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">5 sessions</span></p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
+                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Review</h3>
+                    <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">50%</span></p>
+                    <p class="text-gray-600">Practice: <span class="text-red-500 font-bold">1 session</span></p>
+                </div>
+            </div>
+
+        </div>
+        <!-- MAIN CONTENT -->
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="bottombar">
+        <a href="1Dashboard.html"><span class="material-symbols-rounded">bar_chart_4_bars</span></a>
+        <a href="#"><span class="material-symbols-rounded active">menu_book</span></a>
+        <a href="3Quiz.html"><span class="material-symbols-rounded">exercise</span></a>
+        <a href="4Learning_Plan.html"><span class="material-symbols-rounded">calendar_add_on</span></a>
+        <a href="5Social.html"><span class="material-symbols-rounded">group_add</span></a>
+        <a href="6Profile.html"><span class="material-symbols-rounded">person</span></a>
+    </div>
+
+</body>
+</html>
