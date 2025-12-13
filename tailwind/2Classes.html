@@ -27,7 +27,7 @@
         </div>
 
         <!-- MAIN CONTENT -->
-        <div class="main-content flex flex-col h-full overflow-y-auto p-0 [&::-webkit-scrollbar]:hidden scrollbar-none">
+        <div class="main-content flex flex-col h-full overflow-y-auto p-0 overflow-y-auto [&::-webkit-scrollbar]:hidden scrollbar-none">
             <!-- HEADER -->
             <div class="bg-gray-100 rounded-2xl p-12 shadow-md mb-5 flex items-center gap-4">
                 <div>
@@ -37,48 +37,106 @@
             </div>
 
             <!-- CLASSES GRID -->
-            <div class="bg-white rounded-3xl shadow-md p-8 mb-1 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-10 max-[768px]:grid-cols-2 max-[600px]:grid-cols-1 overflow-y-auto">
-                <!-- test -->
-                
-                <!-- test -->
+            <div class="bg-white rounded-3xl shadow-md p-8 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-5 max-[768px]:grid-cols-2 max-[600px]:grid-cols-1 flex-1 mb-1">
+                <!-- Grammar -->
+                <div class="rounded-3xl p-6 text-white relative flex flex-col justify-between min-h-[280px] shadow-lg transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl bg-[#AFB020]">
+                    <div>
+                        <h3 class="text-2xl font-bold flex justify-start">Grammar</h3>
+                        <p class="text-white/90 mt-2 mb-2">
+                            Master essential grammar rules and build stronger sentence structure.
+                        </p>
+                    </div>
+                    <button class="bg-white text-orange-800 font-bold px-4 py-2 rounded-xl w-fit transform transition duration-300 hover:scale-105 hover:bg-orange-100">START +1 ❤️</button>
+                    <div class="absolute bottom-[60px] right-4 w-[110px] h-[110px] opacity-100">
+                        <img src="../image/grammar_pic.png"/>
+                    </div>
+                </div>
 
-                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
-                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Vocabulary</h3>
-                    <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">70%</span></p>
-                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">5 sessions</span></p>
+                <!-- Vocabulary -->
+                <div class="rounded-3xl p-6 text-white relative flex flex-col justify-between min-h-[280px] shadow-lg transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl bg-[#0FB3E3]">
+                    <div>
+                        <h3 class="text-2xl font-bold flex justify-start">Vocabulary</h3>
+                        <p class="text-white/90 mt-2 mb-6">
+                            Learn new words through simple examples and expand your language power.
+                        </p>
+                    </div>
+                    <button class="bg-white text-blue-700 font-bold px-4 py-2 rounded-xl w-fit transform transition duration-300 hover:scale-105 hover:bg-blue-100">START +1 ❤️</button>
+                    <div class="absolute bottom-2 right-3 w-20 h-20 opacity-90"></div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
-                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Listening</h3>
-                    <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">85%</span></p>
-                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">4 sessions</span></p>
+
+                <!-- Listening -->
+                <div class="rounded-3xl p-6 text-white relative flex flex-col justify-between min-h-[280px] shadow-lg transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl bg-[#E43C98]">
+                    <div>
+                        <h3 class="text-2xl font-bold flex justify-start">Listening</h3>
+                        <p class="text-white/90 mt-2 mb-6">
+                            Improve listening skills with short clips and focused ear training.
+                        </p>
+                    </div>
+                    <button class="bg-white text-pink-700 font-bold px-4 py-2 rounded-xl w-fit transform transition duration-300 hover:scale-105 hover:bg-pink-100">START +1 ❤️</button>
+                    <div class="absolute bottom-2 right-3 w-20 h-20 opacity-90"></div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
-                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Speaking</h3>
-                    <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">50%</span></p>
-                    <p class="text-gray-600">Practice: <span class="text-red-500 font-bold">1 session</span></p>
+
+                <!-- Speaking -->
+                <div class="rounded-3xl p-6 text-white relative flex flex-col justify-between min-h-[280px] shadow-lg transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl bg-[#0059B3]">
+                    <div>
+                        <h3 class="text-2xl font-bold flex justify-start">Speaking</h3>
+                        <p class="text-white/90 mt-2 mb-6">
+                            Practice speaking naturally with guided pronunciation and phrases.
+                        </p>
+                    </div>
+                    <button class="bg-white text-blue-900 font-bold px-4 py-2 rounded-xl w-fit transform transition duration-300 hover:scale-105 hover:bg-blue-200">START +1 ❤️</button>
+                    <div class="absolute bottom-2 right-3 w-20 h-20 opacity-90"></div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
-                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Reading</h3>
-                    <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">75%</span></p>
-                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">3 sessions</span></p>
+
+                <!-- Reading -->
+                <div class="rounded-3xl p-6 text-white relative flex flex-col justify-between min-h-[280px] shadow-lg transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl bg-[#6A1BDA]">
+                    <div>
+                        <h3 class="text-2xl font-bold flex justify-start">Reading</h3>
+                        <p class="text-white/90 mt-2 mb-6">
+                            Train reading comprehension using short and easy-to-follow passages.
+                        </p>
+                    </div>
+                    <button class="bg-white text-purple-800 font-bold px-4 py-2 rounded-xl w-fit transform transition duration-300 hover:scale-105 hover:bg-purple-200">START +1 ❤️</button>
+                    <div class="absolute bottom-2 right-3 w-20 h-20 opacity-90"></div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
-                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Writing</h3>
-                    <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">62%</span></p>
-                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">4 sessions</span></p>
+
+                <!-- Writing -->
+                <div class="rounded-3xl p-6 text-white relative flex flex-col justify-between min-h-[280px] shadow-lg transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl bg-[#FF7157]">
+                    <div>
+                        <h3 class="text-2xl font-bold flex justify-start">Writing</h3>
+                        <p class="text-white/90 mt-2 mb-6">
+                            Build writing skills with simple prompts and structured practice.
+                        </p>
+                    </div>
+                    <button class="bg-white text-orange-700 font-bold px-4 py-2 rounded-xl w-fit transform transition duration-300 hover:scale-105 hover:bg-orange-100">START +1 ❤️</button>
+                    <div class="absolute bottom-2 right-3 w-20 h-20 opacity-90"></div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
-                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Conversation Skill</h3>
-                    <p class="mb-1 text-gray-600">Score: <span class="text-green-500 font-bold">82%</span></p>
-                    <p class="text-gray-600">Practice: <span class="text-green-500 font-bold">5 sessions</span></p>
+
+                <!-- Conversation Skill -->
+                <div class="rounded-3xl p-6 text-white relative flex flex-col justify-between min-h-[280px] shadow-lg transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl bg-[#18A55B]">
+                    <div>
+                        <h3 class="text-2xl font-bold flex justify-start">Conversation Skill</h3>
+                        <p class="text-white/90 mt-2 mb-6">
+                            Practice everyday dialogues and improve your speaking flow.
+                        </p>
+                    </div>
+                    <button class="bg-white text-green-800 font-bold px-4 py-2 rounded-xl w-fit transform transition duration-300 hover:scale-105 hover:bg-green-200">START +1 ❤️</button>
+                    <div class="absolute bottom-2 right-3 w-20 h-20 opacity-90"></div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-md p-8 text-center transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg border border-gray-200">
-                    <h3 class="mb-2 text-gray-800 text-lg font-semibold">Review</h3>
-                    <p class="mb-1 text-gray-600">Score: <span class="text-red-500 font-bold">50%</span></p>
-                    <p class="text-gray-600">Practice: <span class="text-red-500 font-bold">1 session</span></p>
+
+                <!-- Review -->
+                <div class="rounded-3xl p-6 text-white relative flex flex-col justify-between min-h-[280px] shadow-lg transition-transform duration-200 hover:-translate-y-1 hover:shadow-xl bg-[#8A00C9]">
+                    <div>
+                        <h3 class="text-2xl font-bold flex justify-start">Review</h3>
+                        <p class="text-white/90 mt-2 mb-6">
+                            Refresh your lessons and strengthen areas that need improvement.
+                        </p>
+                    </div>
+                    <button class="bg-white text-purple-900 font-bold px-4 py-2 rounded-xl w-fit transform transition duration-300 hover:scale-105 hover:bg-purple-200">START +1 ❤️</button>
+                    <div class="absolute bottom-2 right-3 w-20 h-20 opacity-90"></div>
                 </div>
             </div>
-
+            <!-- CARD GRID -->
         </div>
         <!-- MAIN CONTENT -->
     </div>
