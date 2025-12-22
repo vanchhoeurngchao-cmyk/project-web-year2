@@ -25,11 +25,184 @@
                 <a href="6Profile.html">Profile</a>
             </nav>
         </div>
-
         <!-- MAIN CONTENT -->
+        <div class="main-content flex flex-col h-full overflow-y-auto p-0 [&::-webkit-scrollbar]:hidden scrollbar-none">
+            <!-- HEADER -->
+            <div class="bg-gray-100 rounded-2xl p-12 shadow-md mb-5 flex items-center gap-4">
+                <div>
+                    <h3 class="text-[30px] font-bold">Welcome back, user!!</h3>
+                    <p class="text-md text-gray-500">
+                        Stay consistent — small progress every day leads to big results 🚀
+                    </p>
+                </div>
+            </div>
 
+            <!-- GRID SECTION -->
+            <div class="grid grid-cols-1 gap-5 flex-1">
+                <div class="grid grid-cols-2 gap-5 max-[768px]:grid-cols-1">
+                    <!-- DAILY TO-DO -->
+                    <div class="bg-white rounded-3xl shadow-md px-6 py-6 h-[430px] text-lg font-semibold overflow-x-hidden overflow-y-auto flex-1 [&::-webkit-scrollbar]:hidden scrollbar-none">
+                        <h3 class="text-xl max-[768px]:text-lg font-bold mb-6 text-center">Daily To-Do List</h3>
+                        <div class="flex mb-6">
+                            <input id="task-input" type="text" placeholder="Add a new task" class="flex-1 p-2 rounded-l-lg focus:outline-none shadow-md transition-all duration-300 hover:shadow-xl border border-xl">
+                            <button id="add-btn" class="bg-green-400 text-white px-4 rounded-r-lg hover:bg-green-500 hover:shadow-xl transition shadow-md">Add</button>
+                        </div>
+                        <div id="task-list" class="flex-1 flex flex-col space-y-4"></div>
+                    </div>
+
+                    <!-- MONTHLY GOALS -->
+                    <div class="relative bg-white rounded-3xl shadow-md px-6 py-6 h-[430px] flex items-start justify-center text-lg font-semibold">
+                        <div id="month-timer" class="absolute top-4 right-6 text-red-500 px-3 py-1 rounded-xl font-bold flex items-center gap-2 text-md">
+                            <span class="material-symbols-rounded text-base">schedule</span>
+                            <span id="month-days">0D</span>
+                        </div>
+                        <div class="w-full ">
+                            <h3 class="text-xl max-[768px]:text-lg font-bold mb-6 text-center">Monthly Goal</h3>
+                            <div class="space-y-4">
+                                <!-- GOAL 1 -->
+                                <div class="bg-gray-200 p-4 rounded-xl shadow flex flex-col">
+                                    <div class="grid grid-cols-4 flex">
+                                        <div class="col-span-3">
+                                            <p class="font-semibold mb-4">Complete 3 lessons</p>
+                                            <div class="relative w-full h-6 bg-gray-300 rounded-full mt-1">
+                                                <div class="h-6 bg-purple-400 rounded-full w-[75%]"></div>
+                                                <span class="absolute inset-0 flex items-center justify-center text-sm font-bold text-white">
+                                                    2 / 3
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                            <img src="" class="w-16 h-16">
+                                        </div>
+                                    </div>
+                                    <button class="mt-4 w-full bg-purple-500 hover:bg-purple-600 text-white py-2 rounded-xl font-bold transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
+                                        Claim
+                                    </button>
+                                </div>
+                                <!-- GOAL 2 -->
+                                <div class="bg-gray-200 p-4 rounded-xl shadow flex flex-col">
+                                    <div class="grid grid-cols-4 flex">
+                                        <div class="col-span-3">
+                                            <p class="font-semibold mb-4">Learn 30 new words</p>
+                                            <div class="relative w-full h-6 bg-gray-300 rounded-full mt-1">
+                                                <div class="h-6 bg-yellow-400 rounded-full w-[80%]"></div>
+                                                <span class="absolute inset-0 flex items-center justify-center text-sm font-bold text-white">
+                                                    24 / 30
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-center">
+                                            <img src="" class="w-16 h-16">
+                                        </div>
+                                    </div>
+                                    <button class="mt-4 w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-xl font-bold transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
+                                        Claim
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WEEKLY PLAN -->
+                <div class="bg-white rounded-3xl shadow-md px-6 py-6 min-h-[400px]">
+                    <!-- HEADER -->
+                    <div class="flex items-center justify-between mb-4 px-12">
+                        <h3 class="text-2xl font-bold">
+                            Weekly Learning Schedule
+                        </h3>
+                        <button
+                            class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl font-semibold shadow transition">
+                            Edit Schedule
+                        </button>
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full table-auto border border-gray-200 text-base">
+                            <thead class="bg-gray-200">
+                                <tr>
+                                    <th class="px-4 py-4 border text-left">Day</th>
+                                    <th class="px-4 py-4 border text-left">Subject</th>
+                                    <th class="px-4 py-4 border text-left max-[768px]:hidden">Duration</th>
+                                    <th class="px-4 py-4 border text-center max-[600px]:hidden">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr class="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition">
+                                    <td class="px-4 py-4 border font-semibold">Monday</td>
+                                    <td class="px-4 py-4 border">Vocabulary</td>
+                                    <td class="px-4 py-4 border max-[768px]:hidden">30 min</td>
+                                    <td class="px-4 py-4 border text-center max-[600px]:hidden">
+                                        <button class="text-blue-600 hover:underline">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr class="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition">
+                                    <td class="px-4 py-4 border font-semibold">Tuesday</td>
+                                    <td class="px-4 py-4 border">Listening</td>
+                                    <td class="px-4 py-4 border max-[768px]:hidden">45 min</td>
+                                    <td class="px-4 py-4 border text-center max-[600px]:hidden">
+                                        <button class="text-blue-600 hover:underline">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr class="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition">
+                                    <td class="px-4 py-4 border font-semibold">Wednesday</td>
+                                    <td class="px-4 py-4 border">Grammar</td>
+                                    <td class="px-4 py-4 border max-[768px]:hidden">40 min</td>
+                                    <td class="px-4 py-4 border text-center max-[600px]:hidden">
+                                        <button class="text-blue-600 hover:underline">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr class="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition">
+                                    <td class="px-4 py-4 border font-semibold">Thursday</td>
+                                    <td class="px-4 py-4 border">Speaking</td>
+                                    <td class="px-4 py-4 border max-[768px]:hidden">30 min</td>
+                                    <td class="px-4 py-4 border text-center max-[600px]:hidden">
+                                        <button class="text-blue-600 hover:underline">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr class="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition">
+                                    <td class="px-4 py-4 border font-semibold">Friday</td>
+                                    <td class="px-4 py-4 border">Quiz</td>
+                                    <td class="px-4 py-4 border max-[768px]:hidden">20 min</td>
+                                    <td class="px-4 py-4 border text-center max-[600px]:hidden">
+                                        <button class="text-blue-600 hover:underline">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr class="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition">
+                                    <td class="px-4 py-4 border font-semibold">Saturday</td>
+                                    <td class="px-4 py-4 border">Review</td>
+                                    <td class="px-4 py-4 border max-[768px]:hidden">50 min</td>
+                                    <td class="px-4 py-4 border text-center max-[600px]:hidden">
+                                        <button class="text-blue-600 hover:underline">Edit</button>
+                                    </td>
+                                </tr>
+                                <tr class="odd:bg-gray-50 even:bg-gray-100 hover:bg-gray-200 transition">
+                                    <td class="px-4 py-4 border font-semibold">Sunday</td>
+                                    <td class="px-4 py-4 border">Fun Challenge</td>
+                                    <td class="px-4 py-4 border max-[768px]:hidden">—</td>
+                                    <td class="px-4 py-4 border text-center max-[600px]:hidden">
+                                        <button class="text-blue-600 hover:underline">Edit</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- ADD BUTTON -->
+                    <div class="mt-5 text-center">
+                        <button
+                            class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-xl font-semibold shadow transition">
+                            + Add Schedule
+                        </button>
+                    </div>
+
+                </div>
+                <!-- WEEKLY PLAN -->
+
+            </div>
+        </div>
+        <!-- MAIN CONTENT -->
     </div>
-
     <!-- BOTTOM BAR -->
     <div class="bottombar">
         <a href="1Dashboard.html"><span class="material-symbols-rounded">bar_chart_4_bars</span></a>
@@ -40,5 +213,109 @@
         <a href="6Profile.html"><span class="material-symbols-rounded">person</span></a>
     </div>
 
+    <script>
+        const taskInput = document.getElementById('task-input');
+        const addBtn = document.getElementById('add-btn');
+        const taskList = document.getElementById('task-list');
+
+        function createQuest(taskText) {
+            const colors = ["#58CC02", "#FF9500", "#1CB0F6", "#FF3B30"]; // Example colors
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            // Task container
+            const task = document.createElement('div');
+            task.className = "grid grid-cols-4 items-center bg-gray-200 rounded-2xl px-4 py-2 overflow-hidden";
+
+            // Left: text + progress
+            const left = document.createElement('div');
+            left.className = "flex flex-col col-span-3 overflow-hidden";
+
+            const title = document.createElement('span');
+            title.textContent = taskText;
+            title.className = "font-semibold text-gray-800 truncate";
+
+            // Progress bar wrapper
+            const progressWrapper = document.createElement('div');
+            progressWrapper.className = "relative w-full bg-gray-300 rounded-full h-5 mt-2 overflow-hidden";
+
+            // Progress fill
+            const progressFill = document.createElement('div');
+            progressFill.className = "absolute left-0 top-0 h-full";
+            progressFill.style.width = "0%";
+            progressFill.style.backgroundColor = color;
+            progressFill.style.transition = "width 0.3s";
+
+            // Progress text
+            const progressText = document.createElement('span');
+            progressText.className = "absolute inset-0 flex items-center justify-center text-xs font-bold text-white";
+            progressText.textContent = "0 / 1";
+
+            progressWrapper.appendChild(progressFill);
+            progressWrapper.appendChild(progressText);
+
+            left.appendChild(title);
+            left.appendChild(progressWrapper);
+
+            // Right: buttons
+            const right = document.createElement('div');
+            right.className = "flex items-center justify-center space-x-2";
+
+            // Complete button
+            const completeBtn = document.createElement('button');
+            completeBtn.textContent = "✔";
+            completeBtn.className = "bg-green-500 hover:bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold";
+            completeBtn.addEventListener('click', () => {
+                let current = parseInt(progressText.textContent.split(" / ")[0]);
+                const max = parseInt(progressText.textContent.split(" / ")[1]);
+                if(current < max){
+                    current += 1;
+                    const percentage = (current / max) * 100;
+                    progressFill.style.width = percentage + "%";
+                    progressText.textContent = `${current} / ${max}`;
+                }
+            });
+
+            // Delete button
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = "🗑";
+            deleteBtn.className = "bg-red-500 hover:bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold";
+            deleteBtn.addEventListener('click', () => {
+                taskList.removeChild(task);
+            });
+
+            right.appendChild(completeBtn);
+            right.appendChild(deleteBtn);
+
+            task.appendChild(left);
+            task.appendChild(right);
+
+            return task;
+        }
+
+        addBtn.addEventListener('click', () => {
+            const taskText = taskInput.value.trim();
+            if(taskText){
+                const task = createQuest(taskText);
+                taskList.appendChild(task);
+                taskInput.value = '';
+            }
+        });
+
+        taskInput.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') addBtn.click();
+        });
+
+        // monthly timer
+        function updateMonthTimer() {
+            const now = new Date();
+            const lastDay = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+            const remainingDays = lastDay.getDate() - now.getDate();
+            document.getElementById('month-days').textContent = remainingDays + (remainingDays === 1 ? "Day" : "Days");
+        }
+
+        // Update immediately and every hour
+        updateMonthTimer();
+        setInterval(updateMonthTimer, 1000 * 60 * 60);
+    </script>
 </body>
 </html>

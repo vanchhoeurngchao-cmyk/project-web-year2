@@ -40,7 +40,11 @@
             <div class="grid grid-cols-1 gap-5 flex-1">
                 <div class="grid grid-cols-2 gap-5 flex-1 max-[768px]:grid-cols-1">
                     <!-- DAILY Quest -->
-                    <div class="bg-white rounded-3xl shadow-md px-6 py-6 min-h-[300px] text-lg font-semibold">
+                    <div class="relative bg-white rounded-3xl shadow-md px-6 py-6 min-h-[300px] text-lg font-semibold">
+                        <div id="daily-timer" class="absolute top-4 right-6 text-red-500 px-3 py-1 rounded-xl font-bold flex items-center gap-2 text-sm">
+                            <span class="material-symbols-rounded text-base">schedule</span>
+                            <span id="daily-hours">0H</span>
+                        </div>
                         <h3 class="text-xl max-[768px]:text-lg font-bold mb-4 text-center">Daily Quests</h3>
                         <div class="flex flex-col space-y-4">
                             <!-- QUEST ROW 1 -->
@@ -101,7 +105,7 @@
                     </div>
 
                     <!-- CURRENT LESSON -->
-                    <div class="bg-white rounded-3xl shadow-md px-6 py-6 min-h-[300px] flex items-start justify-center text-lg font-semibold">
+                    <div class="bg-white rounded-3xl shadow-md px-6 py-6 min-h-[300px] flex items-start justify-center text-lg font-semibold"> 
                         <div class="w-full text-center">
                             <h3 class="text-xl max-[768px]:text-lg font-bold mb-4">Current Lesson</h3>
                             <div class="space-y-4">
@@ -199,5 +203,21 @@
         <a href="6Profile.html"><span class="material-symbols-rounded">person</span></a>
     </div>
 
+    <script>
+        function updateDailyTimer() {
+            const now = new Date();
+            const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
+            const diff = endOfDay - now; // milliseconds remaining
+
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('daily-hours').textContent = `${hours}H ${minutes}M`;
+        }
+
+        // Update immediately
+        updateDailyTimer();
+        // Update every minute
+        setInterval(updateDailyTimer, 1000 * 60);
+    </script>
 </body>
 </html>
