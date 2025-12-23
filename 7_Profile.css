@@ -1,67 +1,50 @@
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card{
-    width: 250px;
-    height: 400px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px black solid;
-    background-color: rgb(245, 245, 245);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border: none;
-}
-img{
-    height: 150px;
-    border-radius: 50%;
-}
-#role{
-    color: gray;
-    margin-top: -15px;
-}
-.haha{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-.stat{
-    text-align: center;
-    p{
-        margin-top: -15px;
-    }
-}
-.bio{
-    background-color: gainsboro;
-    width: 200px;
-    border-radius: 30px;
-    text-align: center;
-    padding: 5px;
-}
-.btn{
-    margin-top: 30px;
-    display: flex;
-    gap: 20px;
-}
-button{
-    padding: 10px;
-    width: 100px;
-    border-radius: 10px;
-    border: none;
-}
-#follow{
-    background-color: rgb(243, 83, 83);
-    color: white;
-}
-#follow:hover{
-    background-color: #E98EB4;
-}
-#message:hover{
-    background-color: rgb(146, 142, 142);
-    color: white;
-}
+<div class="flex justify-center items-center">
+
+            <!-- PROFILE CARD -->
+            <div class="w-[260px] p-8 flex flex-col items-center bg-white rounded-2xl shadow-lg">
+
+                <!-- Avatar -->
+                <img
+                    src="https://www.jammable.com/cdn-cgi/image/width=3840,quality=25,format=webp/https://imagecdn.voicify.ai/models/3376e197-c19c-471d-ad79-0a78cce84539.png"
+                    class="h-36 w-36 rounded-full object-cover"
+                    alt=""
+                >
+
+                <!-- Name -->
+                <h2 class="text-xl font-semibold mt-3">Masha Kujou</h2>
+                <p class="text-gray-500 text-sm -mt-1">High-school Student</p>
+
+                <!-- Stats -->
+                <div class="flex justify-between w-full mt-6">
+                    <div class="text-center">
+                        <h3 class="font-bold">100</h3>
+                        <p class="text-xs text-gray-500">Following</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold">1.2M</h3>
+                        <p class="text-xs text-gray-500">Follower</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold">2.3B</h3>
+                        <p class="text-xs text-gray-500">Likes</p>
+                    </div>
+                </div>
+
+                <!-- Bio -->
+                <div class="bg-gray-200 text-sm text-center rounded-full px-4 py-1 mt-5">
+                    My account all about ...
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex gap-4 mt-6">
+                    <button class="px-5 py-2 bg-red-500 text-white rounded-lg hover:bg-pink-400 transition">
+                        Follow
+                    </button>
+                    <button class="px-5 py-2 bg-gray-300 rounded-lg hover:bg-gray-500 hover:text-white transition">
+                        Message
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
