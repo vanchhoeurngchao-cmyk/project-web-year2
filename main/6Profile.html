@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../sidebar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#e8f1f8]">
+    <div class="grid grid-cols-[230px_1fr] gap-5 p-5 h-screen max-[992px]:grid-cols-[200px_1fr] max-[600px]:grid-cols-1">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../image/pink-cat-background-cute-cat-background-animal-background-stock-vector.jpg" alt="">
+                <h2>L-Learning</h2>
+            </div>
+            <nav>
+                <a href="1Dashboard.html">Dashboard</a>
+                <a href="2Classes.html">Classes</a>
+                <a href="3Quiz.html">Quiz</a>
+                <a href="4Learning_Plan.html">Learning Plan</a>
+                <a href="5Social.html">Social</a>
+                <a href="#" class="active">Profile</a>
+            </nav>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="grid grid-cols-5 gap-6 h-full overflow-y-auto overflow-y-auto [&::-webkit-scrollbar]:hidden scrollbar-none">
+            <!-- profile (left section)-->
+            <div class="col-span-3 flex flex-col w-full bg-white rounded-3xl py-6 px-6">
+                <!-- icon -->
+                <div class="relative w-full bg-[#E6F6FF] rounded-t-3xl p-6 min-h-[220px] flex items-center justify-center">
+                    <div class="absolute top-4 left-4 lg:hidden">
+                        <button class="w-10 h-10 rounded-xl bg-transparent flex items-center justify-center text-black hover:text-gray-400 border-2 border-b-4 border-gray-300 px-6 py-6 transition-all duration-150 ease-out hover:translate-y-[2px] hover:border-b-2">
+                            <span class="material-symbols-rounded">settings</span>
+                        </button>
+                    </div>
+                    <div class="absolute top-5 right-5">
+                        <button class="w-10 h-10 rounded-xl bg-transparent flex items-center justify-center text-black hover:text-gray-400 border-2 border-b-4 border-gray-300 px-6 py-6 transition-all duration-150 ease-out hover:translate-y-[2px] hover:border-b-2">
+                            <span class="material-symbols-rounded">edit</span>
+                        </button>
+                    </div>
+                    <div class="relative flex items-center justify-center">
+                        <div class="w-40 h-40 rounded-full border-4 border-dashed border-sky-400 flex items-center justify-center">
+                            <div class="w-32 h-32 rounded-full bg-sky-300 overflow-hidden flex items-center justify-center">
+                                <img src="" class="w-full h-full object-cover"/>
+                            </div>
+                        </div>
+                        <div class="absolute text-white text-4xl font-light pointer-events-none">C</div>
+                    </div>
+                </div>
+                <!-- Name & Username -->
+                <div class="flex flex-col item-center text-center">
+                    <h2 class="text-2xl font-bold mt-3">Masha Kujou</h2>
+                    <p class="text-gray-500 text-md -mt-1">@masha-kujou_123</p>
+                </div>
+                <!--  Stats -->
+                <div class="flex justify-evenly w-full mt-6">
+                    <div class="text-center">
+                        <h3 class="font-bold text-lg">6</h3>
+                        <p class="text-sm text-gray-500">Following</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-lg">0</h3>
+                        <p class="text-sm text-gray-500">Follower</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-bold text-lg">2.3B</h3>
+                        <p class="text-sm text-gray-500">Likes</p>
+                    </div>
+                </div>
+                <!-- add bio box -->
+                <div class="flex justify-center border-b-2 border-gray-300 pb-10">
+                    <div class="w-[50%] bg-gray-200 text-md text-center rounded-full px-2 py-2 mt-5">
+                        + Add bio . <span>I'm a high school student...</span>
+                    </div>
+                </div>
+                <!-- hidden on big screen -->
+                <div class="grid grid-cols-5 lg:hidden">
+                    <button class="col-span-4 flex">
+                        <span>add friend icon..</span> ADD FRIENDS
+                    </button>
+                    <button class="col-span-1">
+                        <span>qr icon</span>
+                    </button>
+                </div>
+                <!-- overview -->
+                <div class="flex flex-col">
+                    <h3 class="font-extrabold text-3xl mt-10 mb-4 ml-2">Overview</h3>
+                    <div class="grid grid-cols-2 grid-rows-2 gap-4">
+                        <!-- streak box -->
+                        <div class="flex border-2 border-gray-300 rounded-2xl px-4 py-4">
+                            <span class="text-4xl">🔥</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-bold">43</span>
+                                <span class="text-gray-400 font-bold -mt-1">Day streak</span>
+                            </div>
+                        </div>
+
+                        <!-- total xp box -->
+                        <div class="flex border-2 border-gray-300 rounded-2xl px-4 py-4">
+                            <span class="text-4xl">⚡</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-bold">1908</span>
+                                <span class="text-gray-400 font-bold -mt-1">Total XP</span>
+                            </div>
+                        </div>
+
+                        <!-- current league -->
+                        <div class="flex border-2 border-gray-300 rounded-2xl px-4 py-4">
+                            <span class="text-4xl">🏆</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-bold">EPIC</span>
+                                <span class="text-gray-400 font-bold -mt-1">Current League</span>
+                            </div>
+                        </div>
+
+                        <!-- fastest time record -->
+                        <div class="flex border-2 border-gray-300 rounded-2xl px-4 py-4">
+                            <span class="text-4xl">⌛</span>
+                            <div class="flex flex-col">
+                                <span class="text-lg font-bold">5:24mins</span>
+                                <span class="text-gray-400 font-bold -mt-1">Fastest record</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Friend (lg:hidden) (toggle between following and follower) -->
+                <div class="flex flex-col lg:hidden">
+                    <h3>Friends</h3>
+                    <!-- following side will show on small device first -->
+                    <div class="flex flex-col">
+                        <div class="flex justify-evenly border-b">
+                            <span>FOLLOWING</span>
+                            <span>FOLLOWER</span>
+                        </div>
+                        <div class="flex flex-col space-y-3">
+                            <!-- following1 -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 ml-2 rounded-full" src="" alt="">
+                                    <div class="flex flex-col">
+                                        <span class="font-semibold text-sm">Oreo Bluntik</span>
+                                        <span class="text-sm text-gray-600">332 XP</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- following2 -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 ml-2 rounded-full" src="" alt="">
+                                    <div class="flex flex-col">
+                                        <span class="font-semibold text-sm">チャムナリ</span>
+                                        <span class="text-sm text-gray-600">149 XP</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- following3 -->
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <img class="w-10 h-10 ml-2 rounded-full" src="" alt="">
+                                    <div class="flex flex-col">
+                                        <span class="font-semibold text-sm">Quỳnh Em</span>
+                                        <span class="text-sm text-gray-600">100 XP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- follower side (hidden only show when user click the word FOLLOWER) -->
+                    <div class="flex flex-col hidden">
+                        <div class="flex justify-evenly border-b">
+                            <span>FOLLOWING</span>
+                            <span>FOLLOWER</span>
+                        </div>
+                        <div class="flex justify-center item-center">
+                            <span>No followers yet</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- invite friends(lg:hidden) -->
+                <div class="flex flex-co lg:hidden">
+                    <div class="flex">
+                        <span>message icon..</span>
+                        <div class="flex flex-col">
+                            <h3>Invite friends</h3>
+                            <span>Tell your friends it's free and fun to learn a language on L-Learning!</span>
+                        </div>
+                    </div>
+                    <button class="w-full">
+                        INVITE FRIENDS
+                    </button>
+                </div>
+                <!-- achievement -->
+                <div class="flex flex-col">
+                    <div class="flex justify-between mt-10 mx-2">
+                        <h3 class="font-extrabold text-3xl mb-4">Achievements</h3>
+                        <span class="font-extrabold text-md text-blue-300 mt-2 cursor-pointer transition-all duration-150 ease-out hover:text-blue-500">VIEW ALL</span>
+                    </div>
+                    <div class="flex flex-col border-2 border-gray-300 rounded-3xl">
+                        <!-- box1 -->
+                        <div class="flex border-b-2 border-gray-300 px-5 py-5">
+                            <div class="w-[25%] h-full">
+                                <img src="" class="">
+                            </div>
+                            <div class="flex flex-col space-y-3 w-full">
+                                <div class="flex justify-between">
+                                    <h1 class="font-bold text-xl">Wildfire</h1>
+                                    <span class="text-gray-300 font-semibold text-lg">40/40</span>
+                                </div>
+                                <div>
+                                    <div class="relative w-[101%] h-5 bg-gray-300 rounded-full mt-1 -ml-1">
+                                        <div class="h-5 bg-yellow-400 rounded-full w-[100%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 font-semibold text-lg">Reach a 40 day streak</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- box2 -->
+                        <div class="flex border-b-2 border-gray-300 px-5 py-5">
+                            <div class="w-[25%] h-full">
+                                <img src="" class="">
+                            </div>
+                            <div class="flex flex-col space-y-3 w-full">
+                                <div class="flex justify-between">
+                                    <h1 class="font-bold text-xl">Sage</h1>
+                                    <span class="text-gray-300 font-semibold text-lg">1500/1500</span>
+                                </div>
+                                <div>
+                                    <div class="relative w-[101%] h-5 bg-gray-300 rounded-full mt-1 -ml-1">
+                                        <div class="h-5 bg-yellow-400 rounded-full w-[100%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 font-semibold text-lg">Earn 1500 XP</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- box3 -->
+                        <div class="flex px-5 py-5">
+                            <div class="w-[25%] h-full">
+                                <img src="" class="">
+                            </div>
+                            <div class="flex flex-col space-y-3 w-full">
+                                <div class="flex justify-between">
+                                    <h1 class="font-bold text-xl">Champion</h1>
+                                    <span class="text-gray-300 font-semibold text-lg">3/3</span>
+                                </div>
+                                <div>
+                                    <div class="relative w-[101%] h-5 bg-gray-300 rounded-full mt-1 -ml-1">
+                                        <div class="h-5 bg-yellow-400 rounded-full w-[100%]"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 font-semibold text-lg">Advance to the Emerald League</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- profile (left section) -->
+
+            <!-- show following - follower - add more friend and setting (right section) -->
+            <div class="col-span-2 bg-white rounded-3xl flex flex-col py-6 px-6">
+                <div class="flex flex-col border-2 border-gray-300 rounded-2xl px-6 py-4">
+                    <h3 class="font-bold text-xl">Add friends</h3>
+                    <div class="flex mt-6 justify-between border-b-2 border-gray-200 py-4 cursor-pointer">
+                        <div class="flex gap-6">
+                            <span class="material-symbols-rounded scale-x-[-1] text-3xl">search</span>
+                            <span class="font-bold text-lg">Find friends</span>
+                        </div>
+                        <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                    </div>
+                    <div class="flex mt-4 justify-between cursor-pointer">
+                        <div class="flex gap-6">
+                            <span class="material-symbols-rounded text-3xl">mail</span>
+                            <span class="font-bold text-lg">Invite friends</span>
+                        </div>
+                        <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                    </div>
+                </div>
+
+                <!-- following and follower table hidden on mobile and will show in the profile  -->
+                <!-- following side will show on small device first -->
+                <div class="flex flex-col border-2 border-gray-300 rounded-2xl mt-6">
+                    <div class="flex justify-evenly border-b-2 border-gray-300 py-4">
+                        <span class="font-bold text-md text-blue-500">FOLLOWING</span>
+                        <span class="font-bold text-md text-gray-400">FOLLOWERS</span>
+                    </div>
+                    <div class="flex flex-col space-y-8 p-6">
+                        <!-- following1 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-8">
+                                <img class="w-12 h-12 ml-2 rounded-full" src="" alt="">
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-bold">Oreo Bluntik</span>
+                                    <span class="text-gray-400 font-bold -mt-1">332 XP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- following2 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-8">
+                                <img class="w-12 h-12 ml-2 rounded-full" src="" alt="">
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-bold">チャムナリ</span>
+                                    <span class="text-gray-400 font-bold -mt-1">149 XP</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- following3 -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-8">
+                                <img class="w-12 h-12 ml-2 rounded-full" src="" alt="">
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-bold">Quỳnh Em</span>
+                                    <span class="text-gray-400 font-bold -mt-1">100 XP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex mt-4 justify-between cursor-pointer py-4 px-6 border-t-2 border-gray-300">
+                        <span class="text-gray-400 font-bold text-md">View 3 more</span>
+                        <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                    </div>
+                </div>
+                <!-- follower side (hidden only show when user click the word FOLLOWER) -->
+                <div class="hidden flex flex-col border-2 border-gray-300 rounded-2xl mt-6">
+                    <div class="flex justify-evenly border-b-2 border-gray-300 py-4">
+                        <span class="font-bold text-md text-gray-400">FOLLOWING</span>
+                        <span class="font-bold text-md text-blue-500">FOLLOWERS</span>
+                    </div>
+                    <div class="flex justify-center item-center px-6 py-14">
+                        <span class="font-bold text-gray-600 text-lg">No follower yet</span>
+                    </div>
+                </div>
+
+                <!-- setting card will show an icon in profile when on small screen-->
+                <div class="flex flex-col">
+                    <div class="relative flex border-t-2 border-gray-400 mt-10 justify-center py-4">
+                        <h1 class="font-bold text-2xl text-gray-400">Settings</h1>
+                        <button id="done-btn" class="hidden absolute top-5 right-5 text-blue-400 font-bold text-lg">DONE</button>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="font-bold text-xl text-gray-500 mt-5 ml-1">Account</h2>
+                        <div class="flex flex-col border-2 border-gray-300 rounded-2xl mt-2">
+                            <div class="flex justify-between border-b border-300 px-6 py-4">
+                                <h3 class="font-bold text-xl text-gray-700">Preferences</h3>
+                                <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                            </div>
+                            <div class="flex justify-between border-b border-300 px-6 py-4">
+                                <h3 class="font-bold text-xl text-gray-700">Profile</h3>
+                                <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                            </div>
+                            <div class="flex justify-between border-b border-300 px-6 py-4">
+                                <h3 class="font-bold text-xl text-gray-700">Notification</h3>
+                                <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                            </div>
+                            <div class="flex justify-between border-b border-300 px-6 py-4">
+                                <h3 class="font-bold text-xl text-gray-700">Courses</h3>
+                                <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                            </div>
+                            <div class="flex justify-between border-b border-300 px-6 py-4">
+                                <h3 class="font-bold text-xl text-gray-700">Social Accounts</h3>
+                                <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                            </div>
+                            <div class="flex justify-between px-6 py-4">
+                                <h3 class="font-bold text-xl text-gray-700">Privacy Setting</h3>
+                                <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                            </div>
+                        </div>
+                        <h2 class="font-bold text-xl text-gray-500 mt-5 ml-1">Support</h2>
+                        <div class="flex justify-between border-2 border-gray-300 rounded-2xl px-6 py-4 mt-2">
+                            <h3 class="font-bold text-xl text-gray-700">Help Center</h3>
+                            <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                        </div>
+                        <button class="w-full px-12 py-2 text-blue-300 font-extrabold text-xl border-2 border-b-4 border-gray-300 rounded-3xl transition-all duration-150 ease-out hover:translate-y-[2px] hover:border-b-2 hover:text-blue-400 mt-5">
+                            LOG OUT
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- show following - follower - add more friend and setting (right section) -->
+        </div>
+        <!-- MAIN CONTENT -->
+
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="bottombar">
+        <a href="1Dashboard.html"><span class="material-symbols-rounded">bar_chart_4_bars</span></a>
+        <a href="2Classes.html"><span class="material-symbols-rounded">menu_book</span></a>
+        <a href="3Quiz.html"><span class="material-symbols-rounded">exercise</span></a>
+        <a href="4Learning_Plan.html"><span class="material-symbols-rounded">calendar_add_on</span></a>
+        <a href="5Social.html"><span class="material-symbols-rounded">group_add</span></a>
+        <a href="#"><span class="material-symbols-rounded active">person</span></a>
+    </div>
+
+</body>
+</html>
