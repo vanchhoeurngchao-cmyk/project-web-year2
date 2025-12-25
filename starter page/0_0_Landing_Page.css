@@ -17,7 +17,7 @@
     font-family: Arial, sans-serif;
 }
 body {
-    background-image: url("../image/under_sea.jpg");
+    background-image: url("../image/starter_page_pic/under_sea.jpg");
     background-size: cover;        /* Make it fit the whole screen */
     background-position: center;   /* Center the image */
     background-repeat: no-repeat;  /* Prevent tiling */

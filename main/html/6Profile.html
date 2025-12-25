@@ -13,7 +13,7 @@
         <!-- SIDEBAR -->
         <div class="sidebar">
             <div class="logo">
-                <img src="../image/pink-cat-background-cute-cat-background-animal-background-stock-vector.jpg" alt="">
+                <img src="../../image/main pic/logo.png">
                 <h2>L-Learning</h2>
             </div>
             <nav>
@@ -27,13 +27,13 @@
         </div>
 
         <!-- MAIN CONTENT -->
-        <div class="grid grid-cols-5 gap-6 h-full overflow-y-auto overflow-y-auto [&::-webkit-scrollbar]:hidden scrollbar-none">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 h-full overflow-y-auto [&::-webkit-scrollbar]:hidden scrollbar-none">
             <!-- profile (left section)-->
-            <div class="col-span-3 flex flex-col w-full bg-white rounded-3xl py-6 px-6">
+            <div id="profile-section" class="md:col-span-3 flex flex-col w-full bg-white rounded-3xl py-6 px-6">
                 <!-- icon -->
                 <div class="relative w-full bg-[#E6F6FF] rounded-t-3xl p-6 min-h-[220px] flex items-center justify-center">
-                    <div class="absolute top-4 left-4 lg:hidden">
-                        <button class="w-10 h-10 rounded-xl bg-transparent flex items-center justify-center text-black hover:text-gray-400 border-2 border-b-4 border-gray-300 px-6 py-6 transition-all duration-150 ease-out hover:translate-y-[2px] hover:border-b-2">
+                    <div class="absolute top-4 left-4 md:hidden">
+                        <button id="setting" class="w-10 h-10 rounded-xl bg-transparent flex items-center justify-center text-black hover:text-gray-400 border-2 border-b-4 border-gray-300 px-6 py-6 transition-all duration-150 ease-out hover:translate-y-[2px] hover:border-b-2">
                             <span class="material-symbols-rounded">settings</span>
                         </button>
                     </div>
@@ -72,18 +72,21 @@
                     </div>
                 </div>
                 <!-- add bio box -->
-                <div class="flex justify-center border-b-2 border-gray-300 pb-10">
+                <div class="flex justify-center">
                     <div class="w-[50%] bg-gray-200 text-md text-center rounded-full px-2 py-2 mt-5">
                         + Add bio . <span>I'm a high school student...</span>
                     </div>
                 </div>
-                <!-- hidden on big screen -->
-                <div class="grid grid-cols-5 lg:hidden">
-                    <button class="col-span-4 flex">
-                        <span>add friend icon..</span> ADD FRIENDS
+                <!-- Hidden on big screen -->
+                <div class="grid grid-cols-5 md:hidden gap-2 p-2 border-b-2 border-gray-300 mt-5 pb-5">
+                    <!-- Add Friend Button -->
+                    <button class="col-span-4 flex items-center justify-center gap-2 font-extrabold border-2 border-gray-300 border-b-4 hover:border-b-2 text-black hover:text-gray-400 transition-all duration-150 ease-out hover:translate-y-[2px] rounded-xl py-2 px-4 bg-transparent">
+                        <span class="material-symbols-rounded text-xl">person_add</span>
+                        ADD FRIENDS
                     </button>
-                    <button class="col-span-1">
-                        <span>qr icon</span>
+                    <!-- QR Code Button -->
+                    <button class="col-span-1 flex items-center justify-center font-extrabold border-2 border-gray-300 border-b-4 hover:border-b-2 text-black hover:text-gray-400 transition-all duration-150 ease-out hover:translate-y-[2px] rounded-xl py-2 px-4 bg-transparent">
+                        <span class="material-symbols-rounded text-xl">qr_code</span>
                     </button>
                 </div>
                 <!-- overview -->
@@ -129,67 +132,84 @@
                 </div>
                 <!-- Friend (lg:hidden) (toggle between following and follower) -->
                 <div class="flex flex-col lg:hidden">
-                    <h3>Friends</h3>
+                    <div class="flex justify-between">
+                        <h3 class="font-extrabold text-3xl mt-10 -mb-2 ml-2">Friends</h3>
+                        <h3 class="font-extrabold text-lg mt-12 text-blue-300 -mb-2 mr-2">ADD FRIENDS</h3>
+                    </div>
                     <!-- following side will show on small device first -->
-                    <div class="flex flex-col">
-                        <div class="flex justify-evenly border-b">
-                            <span>FOLLOWING</span>
-                            <span>FOLLOWER</span>
+                    <div class="flex flex-col border-2 border-gray-300 rounded-2xl mt-6 cursor-pointer">
+                        <div class="flex justify-evenly border-b-2 border-gray-300 py-4">
+                            <span class="font-bold text-md text-blue-500">FOLLOWING</span>
+                            <span class="font-bold text-md text-gray-400 hover:text-blue-500">FOLLOWERS</span>
                         </div>
-                        <div class="flex flex-col space-y-3">
+                        <div class="flex flex-col space-y-8 p-6">
                             <!-- following1 -->
                             <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-3">
-                                    <img class="w-10 h-10 ml-2 rounded-full" src="" alt="">
+                                <div class="flex items-center gap-8">
+                                    <div class="w-14 h-14 rounded-full bg-sky-400 flex items-center justify-center text-white text-2xl font-black select-none">
+                                        O
+                                    </div>
                                     <div class="flex flex-col">
-                                        <span class="font-semibold text-sm">Oreo Bluntik</span>
-                                        <span class="text-sm text-gray-600">332 XP</span>
+                                        <span class="text-lg font-bold">Oreo Bluntik</span>
+                                        <span class="text-gray-400 font-bold -mt-1">332 XP</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- following2 -->
                             <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-3">
-                                    <img class="w-10 h-10 ml-2 rounded-full" src="" alt="">
+                                <div class="flex items-center gap-8">
+                                    <div class="w-14 h-14 rounded-full bg-yellow-300 flex items-center justify-center text-white text-2xl font-black select-none">
+                                        H
+                                    </div>
                                     <div class="flex flex-col">
-                                        <span class="font-semibold text-sm">チャムナリ</span>
-                                        <span class="text-sm text-gray-600">149 XP</span>
+                                        <span class="text-lg font-bold">Hanju ki</span>
+                                        <span class="text-gray-400 font-bold -mt-1">149 XP</span>
                                     </div>
                                 </div>
                             </div>
                             <!-- following3 -->
                             <div class="flex items-center justify-between">
-                                <div class="flex items-center gap-3">
-                                    <img class="w-10 h-10 ml-2 rounded-full" src="" alt="">
+                                <div class="flex items-center gap-8">
+                                    <div class="w-14 h-14 rounded-full bg-sky-900 flex items-center justify-center text-white text-2xl font-black select-none">
+                                        Q
+                                    </div>
                                     <div class="flex flex-col">
-                                        <span class="font-semibold text-sm">Quỳnh Em</span>
-                                        <span class="text-sm text-gray-600">100 XP</span>
+                                        <span class="text-lg font-bold">Quỳnh Em</span>
+                                        <span class="text-gray-400 font-bold -mt-1">100 XP</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="flex mt-4 justify-between cursor-pointer py-4 px-6 border-t-2 border-gray-300">
+                            <span class="text-gray-400 font-bold text-md">View 3 more</span>
+                            <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
+                        </div>
                     </div>
                     <!-- follower side (hidden only show when user click the word FOLLOWER) -->
-                    <div class="flex flex-col hidden">
-                        <div class="flex justify-evenly border-b">
-                            <span>FOLLOWING</span>
-                            <span>FOLLOWER</span>
+                    <div class="hidden flex flex-col border-2 border-gray-300 rounded-2xl mt-6 cursor-pointer">
+                        <div class="flex justify-evenly border-b-2 border-gray-300 py-4">
+                            <span class="font-bold text-md text-gray-400">FOLLOWING</span>
+                            <span class="font-bold text-md text-blue-500">FOLLOWERS</span>
                         </div>
-                        <div class="flex justify-center item-center">
-                            <span>No followers yet</span>
+                        <div class="flex justify-center item-center px-6 py-14">
+                            <span class="font-bold text-gray-600 text-lg">No follower yet</span>
                         </div>
                     </div>
                 </div>
                 <!-- invite friends(lg:hidden) -->
-                <div class="flex flex-co lg:hidden">
-                    <div class="flex">
-                        <span>message icon..</span>
-                        <div class="flex flex-col">
-                            <h3>Invite friends</h3>
-                            <span>Tell your friends it's free and fun to learn a language on L-Learning!</span>
+                <div class="md:hidden bg-white rounded-3xl p-5 shadow-sm border-2 border-gray-300 flex flex-col gap-4 mt-10">
+                    <div class="flex  items-start gap-4">
+                        <div class="w-10 h-8 rounded-xl bg-sky-100 flex items-center justify-center text-sky-500">
+                            <span class="material-symbols-rounded text-3xl">mail</span>
                         </div>
+                        <h3 class="text-lg font-extrabold text-gray-900">
+                            Invite friends
+                        </h3>
                     </div>
-                    <button class="w-full">
+                    <span class="text-sm text-gray-500 leading-snug px-1">
+                        Tell your friends it’s free and fun to learn a language on L-Learning!
+                    </span>
+                    <button class="w-full py-3 rounded-xl bg-sky-500 text-white font-extrabold border-b-4 border-sky-600 transition-all duration-150 hover:bg-sky-400 hover:border-b-2 hover:translate-y-[2px] active:translate-y-[4px] active:border-b-0">
                         INVITE FRIENDS
                     </button>
                 </div>
@@ -201,14 +221,14 @@
                     </div>
                     <div class="flex flex-col border-2 border-gray-300 rounded-3xl">
                         <!-- box1 -->
-                        <div class="flex border-b-2 border-gray-300 px-5 py-5">
-                            <div class="w-[25%] h-full">
-                                <img src="" class="">
+                        <div class="flex border-b-2 border-gray-300 px-5 py-5 md:px-3 sm:px-2 gap-4">
+                            <div>
+                                <img src="../../image/main pic/6profile/streak.png" class="h-[120px] w-[100px] md:h-[90px] md:w-[75px] sm:h-[70px] sm:w-[60px] object-contain">
                             </div>
                             <div class="flex flex-col space-y-3 w-full">
                                 <div class="flex justify-between">
-                                    <h1 class="font-bold text-xl">Wildfire</h1>
-                                    <span class="text-gray-300 font-semibold text-lg">40/40</span>
+                                    <h1 class="font-bold text-xl md:text-lg sm:text-base">Wildfire</h1>
+                                    <span class="text-gray-400 font-semibold text-lg md:text-md sm:text-sm">40/40</span>
                                 </div>
                                 <div>
                                     <div class="relative w-[101%] h-5 bg-gray-300 rounded-full mt-1 -ml-1">
@@ -216,19 +236,19 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="text-gray-400 font-semibold text-lg">Reach a 40 day streak</p>
+                                    <p class="text-gray-400 font-semibold text-lg md:text-md sm:text-sm">Reach a 40 day streak</p>
                                 </div>
                             </div>
                         </div>
                         <!-- box2 -->
-                        <div class="flex border-b-2 border-gray-300 px-5 py-5">
-                            <div class="w-[25%] h-full">
-                                <img src="" class="">
+                        <div class="flex border-b-2 border-gray-300 px-5 py-5 md:px-3 sm:px-2 gap-4">
+                            <div>
+                                <img src="../../image/main pic/6profile/sage.png" class="h-[120px] w-[100px] md:h-[90px] md:w-[75px] sm:h-[70px] sm:w-[60px] object-contain">
                             </div>
                             <div class="flex flex-col space-y-3 w-full">
                                 <div class="flex justify-between">
-                                    <h1 class="font-bold text-xl">Sage</h1>
-                                    <span class="text-gray-300 font-semibold text-lg">1500/1500</span>
+                                    <h1 class="font-bold text-xl md:text-lg sm:text-base">Sage</h1>
+                                    <span class="text-gray-400 font-semibold text-lg md:text-md sm:text-sm">1500/1500</span>
                                 </div>
                                 <div>
                                     <div class="relative w-[101%] h-5 bg-gray-300 rounded-full mt-1 -ml-1">
@@ -236,19 +256,19 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="text-gray-400 font-semibold text-lg">Earn 1500 XP</p>
+                                    <p class="text-gray-400 font-semibold text-lg md:text-md sm:text-sm">Earn 1500 XP</p>
                                 </div>
                             </div>
                         </div>
                         <!-- box3 -->
-                        <div class="flex px-5 py-5">
-                            <div class="w-[25%] h-full">
-                                <img src="" class="">
+                        <div class="flex px-5 py-5 md:px-3 sm:px-2 gap-4">
+                            <div>
+                                <img src="../../image/main pic/6profile/champion.png" class="h-[120px] w-[100px] md:h-[90px] md:w-[75px] sm:h-[70px] sm:w-[60px] object-contain">
                             </div>
                             <div class="flex flex-col space-y-3 w-full">
                                 <div class="flex justify-between">
-                                    <h1 class="font-bold text-xl">Champion</h1>
-                                    <span class="text-gray-300 font-semibold text-lg">3/3</span>
+                                    <h1 class="font-bold text-xl md:text-lg sm:text-base">Champion</h1>
+                                    <span class="text-gray-400 font-semibold text-lg md:text-md sm:text-sm">3/3</span>
                                 </div>
                                 <div>
                                     <div class="relative w-[101%] h-5 bg-gray-300 rounded-full mt-1 -ml-1">
@@ -256,17 +276,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <p class="text-gray-400 font-semibold text-lg">Advance to the Emerald League</p>
+                                    <p class="text-gray-400 font-semibold text-lg md:text-md sm:text-sm">Advance to the Emerald League</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
             <!-- profile (left section) -->
 
             <!-- show following - follower - add more friend and setting (right section) -->
-            <div class="col-span-2 bg-white rounded-3xl flex flex-col py-6 px-6">
+            <div class="hidden md:flex md:col-span-2 bg-white rounded-3xl flex-col py-6 px-6">
                 <div class="flex flex-col border-2 border-gray-300 rounded-2xl px-6 py-4">
                     <h3 class="font-bold text-xl">Add friends</h3>
                     <div class="flex mt-6 justify-between border-b-2 border-gray-200 py-4 cursor-pointer">
@@ -290,7 +311,7 @@
                 <div class="flex flex-col border-2 border-gray-300 rounded-2xl mt-6 cursor-pointer">
                     <div class="flex justify-evenly border-b-2 border-gray-300 py-4">
                         <span class="font-bold text-md text-blue-500">FOLLOWING</span>
-                        <span class="font-bold text-md text-gray-400">FOLLOWERS</span>
+                        <span class="font-bold text-md text-gray-400 hover:text-blue-500">FOLLOWERS</span>
                     </div>
                     <div class="flex flex-col space-y-8 p-6">
                         <!-- following1 -->
@@ -347,7 +368,7 @@
                 </div>
 
                 <!-- setting card will show an icon in profile when on small screen-->
-                <div class="flex flex-col">
+                <div id="settings-section" class="flex flex-col">
                     <div class="relative flex border-t-2 border-gray-400 mt-10 justify-center py-4">
                         <h1 class="font-bold text-2xl text-gray-400">Settings</h1>
                         <button id="done-btn" class="hidden absolute top-5 right-5 text-blue-400 font-bold text-lg">DONE</button>
@@ -385,13 +406,19 @@
                             <h3 class="font-bold text-xl text-gray-700">Help Center</h3>
                             <span class="material-symbols-rounded text-xl text-gray-400 font-extrabold">arrow_forward_ios</span>
                         </div>
-                        <button class="w-full px-12 py-2 text-blue-300 font-extrabold text-xl border-2 border-b-4 border-gray-300 rounded-3xl transition-all duration-150 ease-out hover:translate-y-[2px] hover:border-b-2 hover:text-blue-400 mt-5">
-                            LOG OUT
-                        </button>
+                        <a href="../../starter page/0_1_Login.html">
+                            <button id="log_out" class="w-full px-12 py-2 text-blue-300 font-extrabold text-xl border-2 border-b-4 border-gray-300 rounded-3xl transition-all duration-150 ease-out hover:translate-y-[2px] hover:border-b-2 hover:text-blue-400 mt-5">
+                                LOG OUT
+                            </button>
+                        </a>
                     </div>
                 </div>
+
             </div>
             <!-- show following - follower - add more friend and setting (right section) -->
+
+            <div id="settings-mobile-wrapper" class="hidden md:hidden">3
+            </div>
         </div>
         <!-- MAIN CONTENT -->
 
@@ -407,5 +434,6 @@
         <a href="#"><span class="material-symbols-rounded active">person</span></a>
     </div>
 
+    <script src="../js/profile.js"></script>
 </body>
 </html>
