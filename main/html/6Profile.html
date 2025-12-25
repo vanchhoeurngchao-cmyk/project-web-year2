@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="../sidebar.css">
+    <link rel="stylesheet" href="../../sidebar.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -19,7 +19,7 @@
             <nav>
                 <a href="1Dashboard.html">Dashboard</a>
                 <a href="2Classes.html">Classes</a>
-                <a href="3Quiz.html">Quiz</a>
+                <a href="3Practice.html">Practice</a>
                 <a href="4Learning_Plan.html">Learning Plan</a>
                 <a href="5Social.html">Social</a>
                 <a href="#" class="active">Profile</a>
@@ -48,7 +48,7 @@
                                 <img src="" class="w-full h-full object-cover"/>
                             </div>
                         </div>
-                        <div class="absolute text-white text-4xl font-light pointer-events-none">C</div>
+                        <div class="absolute text-white text-4xl font-extrabold pointer-events-none">M</div>
                     </div>
                 </div>
                 <!-- Name & Username -->
@@ -287,7 +287,7 @@
 
                 <!-- following and follower table hidden on mobile and will show in the profile  -->
                 <!-- following side will show on small device first -->
-                <div class="flex flex-col border-2 border-gray-300 rounded-2xl mt-6">
+                <div class="flex flex-col border-2 border-gray-300 rounded-2xl mt-6 cursor-pointer">
                     <div class="flex justify-evenly border-b-2 border-gray-300 py-4">
                         <span class="font-bold text-md text-blue-500">FOLLOWING</span>
                         <span class="font-bold text-md text-gray-400">FOLLOWERS</span>
@@ -296,7 +296,9 @@
                         <!-- following1 -->
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-8">
-                                <img class="w-12 h-12 ml-2 rounded-full" src="" alt="">
+                                <div class="w-14 h-14 rounded-full bg-sky-400 flex items-center justify-center text-white text-2xl font-black select-none">
+                                    O
+                                </div>
                                 <div class="flex flex-col">
                                     <span class="text-lg font-bold">Oreo Bluntik</span>
                                     <span class="text-gray-400 font-bold -mt-1">332 XP</span>
@@ -306,9 +308,11 @@
                         <!-- following2 -->
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-8">
-                                <img class="w-12 h-12 ml-2 rounded-full" src="" alt="">
+                                <div class="w-14 h-14 rounded-full bg-yellow-300 flex items-center justify-center text-white text-2xl font-black select-none">
+                                    H
+                                </div>
                                 <div class="flex flex-col">
-                                    <span class="text-lg font-bold">チャムナリ</span>
+                                    <span class="text-lg font-bold">Hanju ki</span>
                                     <span class="text-gray-400 font-bold -mt-1">149 XP</span>
                                 </div>
                             </div>
@@ -316,7 +320,9 @@
                         <!-- following3 -->
                         <div class="flex items-center justify-between">
                             <div class="flex items-center gap-8">
-                                <img class="w-12 h-12 ml-2 rounded-full" src="" alt="">
+                                <div class="w-14 h-14 rounded-full bg-sky-900 flex items-center justify-center text-white text-2xl font-black select-none">
+                                    Q
+                                </div>
                                 <div class="flex flex-col">
                                     <span class="text-lg font-bold">Quỳnh Em</span>
                                     <span class="text-gray-400 font-bold -mt-1">100 XP</span>
@@ -330,7 +336,7 @@
                     </div>
                 </div>
                 <!-- follower side (hidden only show when user click the word FOLLOWER) -->
-                <div class="hidden flex flex-col border-2 border-gray-300 rounded-2xl mt-6">
+                <div class="hidden flex flex-col border-2 border-gray-300 rounded-2xl mt-6 cursor-pointer">
                     <div class="flex justify-evenly border-b-2 border-gray-300 py-4">
                         <span class="font-bold text-md text-gray-400">FOLLOWING</span>
                         <span class="font-bold text-md text-blue-500">FOLLOWERS</span>
@@ -395,7 +401,7 @@
     <div class="bottombar">
         <a href="1Dashboard.html"><span class="material-symbols-rounded">bar_chart_4_bars</span></a>
         <a href="2Classes.html"><span class="material-symbols-rounded">menu_book</span></a>
-        <a href="3Quiz.html"><span class="material-symbols-rounded">exercise</span></a>
+        <a href="3Practice.html"><span class="material-symbols-rounded">exercise</span></a>
         <a href="4Learning_Plan.html"><span class="material-symbols-rounded">calendar_add_on</span></a>
         <a href="5Social.html"><span class="material-symbols-rounded">group_add</span></a>
         <a href="#"><span class="material-symbols-rounded active">person</span></a>
