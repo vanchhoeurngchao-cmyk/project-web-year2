@@ -24,7 +24,7 @@ const checkMode = () => {
 
 checkMode();
 
-loginForm.addEventListener('submit', (e) => {
+loginForm.addEventListener('submit', () => {
     
     const email = loginForm.querySelector('input[type="email"]').value;
     const password = loginForm.querySelector('input[type="password"]').value;
@@ -36,7 +36,7 @@ loginForm.addEventListener('submit', (e) => {
     }
 });
 
-signupForm.addEventListener('submit', (e) => {
+signupForm.addEventListener('submit', () => {
     
     const name = signupForm.querySelector('input[type="text"]').value;
     const email = signupForm.querySelector('input[type="email"]').value;

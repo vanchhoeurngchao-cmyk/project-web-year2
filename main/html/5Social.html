@@ -326,12 +326,9 @@
             feedBtn.classList.add("bg-gray-200", "text-gray-700");
             feedBtn.classList.remove("bg-green-500", "text-white");
         }
-
-        // Button events
         feedBtn?.addEventListener("click", showFeed);
         leaderboardBtn?.addEventListener("click", showLeaderboard);
 
-        // DEFAULT (Mobile)
         if (window.innerWidth < 1024) {
             showFeed();
         }
